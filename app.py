@@ -170,12 +170,10 @@ def ask_nova(question, embedder, index, chunks, api_key, assistant_name="NOVA"):
 
     # Try a list of model names in order, in case one is deprecated/renamed
     candidate_models = [
-        "gemini-3.6-flash",
-        "gemini-flash-latest",
         "gemini-2.5-flash",
         "gemini-2.0-flash",
-        "gemini-pro-latest",
-    ]
+        "gemini-1.5-flash",
+      ]
     last_error = None
     for model_name in candidate_models:
         try:
